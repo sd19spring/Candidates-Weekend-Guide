@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+      .container {
+        min-height: 100%;
+        position: relative;
+        background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+        color: white;
+      }
+      .body {
+        padding: 10px;
+        padding-bottom: 60px;
+      }
+        .header {
+          background-color:#009bdf;
+          color: white;
+          padding: 20px;
+          text-align: left;
+        }
+      .topnav {
+        overflow: hidden;
+        background-color: #009bdf;
+        font-family: DINOT-Light;
+        font-weight: bold;
+      }
+        .topnav a {
+          float: left;
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        .topnav a:hover.not(.active) {
+          background-color: #ddd;
+          color: white;
+        }
+        .active {
+          background-color: #00458c;
+        }
+        .footer {
+          padding: 5px;
+          text-align: center;
+          background: #009bdf;
+          margin-top: 20px;
+          width: 100%;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          font-family: DINOT-Light;
+          font-weight: bold;
+          color: white;
+        }
+        .fa {
+          padding: 5px;
+          font-size: 20px;
+          width: 20px;
+          text-align: center;
+          text-decoration: none;
+          margin: 5px 2px;
+          border-radius: 50%;
+        }
+        .fa:hover {
+          opacity: 0.7;
+        }
+        .fa-facebook {
+          background: #3B5998;
+          color: white;
+        }
+        .fa-twitter {
+          background: #55ACEE;
+          color: white;
+        }
+        .fa-linkedin {
+          background: #007bb5;
+          color: white;
+        }
+        .fa-youtube {
+          background: #bb0000;
+          color: white;
+        }
+        .fa-instagram {
+          background: #000;
+          color: white;
+        }
+        .fa-flickr {
+          background: #f40083;
+          color: white;
+        }
+        img {
+          max-width: 50%;
+          height:auto;
+        }
+        h1 {
+          max-width: 50%;
+          height:auto;
+        }
+        h2 {
+          font-family: Dutch801+Rm+BT;
+        }
+        form {
+          font-family: Dutch801+Rm+BT;
+        }
+        p {
+          font-family: Dutch801+Rm+BT;
+        }
+      </style>
+      <link href="//db.onlinewebfonts.com/c/feab4f015f183ad38338781e0369490d?family=DINOT-Regular" rel="stylesheet" type="text/css"/>
+      <link href="//db.onlinewebfonts.com/c/28b5efd56dd0967c557de7d5f34fca2c?family=DINOT-Light" rel="stylesheet" type="text/css"/>
+      <link href="//db.onlinewebfonts.com/c/940f2f81f30e67e3850d7e72e1dc2379?family=Dutch801+Rm+BT" rel="stylesheet" type="text/css"/>
+      <link rel="icon" type="image/jpg" href="{{ img_url1 }}">
+        <title>
+            Olin College of Engineering
+        </title>
+    </head>
+<body style="background: url(https://firebasestorage.googleapis.com/v0/b/klgsglksgjs.appspot.com/o/login3.jpg?alt=media&token=31877b1e-428f-486e-ab6c-8f9a933304cd);
+             background-repeat: no-repeat;
+             background-position: center;
+             height: 100%;
+             background-size: cover;
+             color: white;">
+  <div class="container">
+    <div class="header">
+      <h1><img src="{{ img_url }}" alt="Olin O"/></h1>
+    </div>
+
+    <div class="topnav">
+      <a href="{{ url_for('homepage') }}">WELCOME</a>
+      <a href="{{ url_for('client_login') }}" class="active">LOGIN</a>
+    </div>
+    <div class="body">
+    <h2>Welcome back! Enter your password to continue.</h2>
+    <form action="{{ url_for('client_password', user_id = user_id) }}"  method = "post">
+
+      Password:
+      <br>
+      <input type="password" name="password"><br>
+      <br>
+      <input type="submit" value="Submit">
+      <br>
+      <p style="color:red"><b>*invalid password</b></p>
+    </form>
+  </div>
+    <div class="footer">
+      <h4><a href="http://www.olin.edu/" target="_blank">Olin College of Engineering</a><br>
+        1000 Olin Way <br>
+        Needham, MA 02492<br>
+        781.292.2300 <br>
+      <a href="https://www.facebook.com/OlinCollege/" class="fa fa-facebook" target='_blank'></a>
+      <a href="https://twitter.com/OlinCollege" class="fa fa-twitter" target='_blank'></a>
+      <a href="https://www.flickr.com/photos/olin" class="fa fa-flickr" target='_blank'></a>
+      <a href="https://www.youtube.com/user/FranklinWOlinCollege" class="fa fa-youtube" target='_blank'></a>
+      <a href="https://www.linkedin.com/school/olincollege/" class="fa fa-linkedin" target='_blank'></a>
+      <a href="https://www.instagram.com/olincollege/" class="fa fa-instagram" target='_blank'></a>
+    </div>
+  </div>
+
+</body>
+</html>

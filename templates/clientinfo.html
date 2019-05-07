@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+      .container {
+        min-height: 100%;
+        position: relative;
+      }
+      .body {
+        padding: 10px;
+        padding-bottom: 6%
+        /*padding-bottom: 5000px;*/
+      }
+        .header {
+          background-color:#009bdf;
+          color: white;
+          padding: 20px;
+          text-align: left;
+        }
+        .topnav {
+          overflow: hidden;
+          background-color: #009bdf;
+          font-family: DINOT-Light;
+          font-weight: bold;
+        }
+        .topnav-right {
+          float: right;
+        }
+        .topnav a {
+          float: left;
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        .topnav a:hover.not(.active) {
+          background-color: #ddd;
+          color: white;
+        }
+        .active {
+          background-color: #00458c;
+        }
+        .footer {
+          padding: 5px;
+          text-align: center;
+          background: #009bdf;
+          margin-top: 20px;
+          width: 100%;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          font-family: DINOT-Light;
+          font-weight: bold;
+          color: white;
+        }
+        .fa {
+          padding: 5px;
+          font-size: 20px;
+          width: 20px;
+          text-align: center;
+          text-decoration: none;
+          margin: 5px 2px;
+          border-radius: 50%;
+        }
+        .fa:hover {
+          opacity: 0.7;
+        }
+        .fa-facebook {
+          background: #3B5998;
+          color: white;
+        }
+        .fa-twitter {
+          background: #55ACEE;
+          color: white;
+        }
+        .fa-linkedin {
+          background: #007bb5;
+          color: white;
+        }
+        .fa-youtube {
+          background: #bb0000;
+          color: white;
+        }
+        .fa-instagram {
+          background: #000;
+          color: white;
+        }
+        .fa-flickr {
+          background: #f40083;
+          color: white;
+        }
+        table {
+          table-layout: fixed;
+          border-collapse: collapse;
+          width: 50%;
+          font-family: Dutch801+Rm+BT;
+        }
+        th, td {
+          font-size: 20px;
+          border: 1px solid black;
+          text-align: left;
+          padding: 8px;
+        }
+        tr:nth-child(even) {
+          background-color: #f2f2f2;
+        }
+        img {
+          max-width: 50%;
+          height:auto;
+        }
+        h1 {
+          max-width: 50%;
+          height:auto;
+          font-family: Dutch801+Rm+BT;
+        }
+        h2 {
+          font-family: Dutch801+Rm+BT;
+          font-size: 30px
+        }
+      </style>
+      <link href="//db.onlinewebfonts.com/c/feab4f015f183ad38338781e0369490d?family=DINOT-Regular" rel="stylesheet" type="text/css"/>
+      <link href="//db.onlinewebfonts.com/c/28b5efd56dd0967c557de7d5f34fca2c?family=DINOT-Light" rel="stylesheet" type="text/css"/>
+      <link href="//db.onlinewebfonts.com/c/940f2f81f30e67e3850d7e72e1dc2379?family=Dutch801+Rm+BT" rel="stylesheet" type="text/css"/>
+      <link rel="icon" type="image/jpg" href="{{ img_url1 }}">
+        <title>
+            Olin College of Engineering
+        </title>
+    </head>
+  <body>
+    <div class="conatiner">
+    <div class="header">
+      <h1><img src="{{ img_url }}" alt="Olin O"/></h1>
+    </div>
+
+    <div class="topnav">
+      <a href="{{ url_for('client_welcome', user_id = user_id) }}">WELCOME</a>
+      <a href="{{ url_for('client_schedule', user_id = user_id) }}">CW SCHEDULE</a>
+      {% if user_id != 'guest' %}
+      <a href="{{ url_for('candidate_info', user_id = user_id) }}" class="active">CANDIDATE INFO</a>
+      {% endif %}
+      <div class="topnav-right">
+        <a href="{{ url_for('homepage') }}">LOGOUT</a>
+      </div>
+    </div>
+  <div class="body">
+    <br>
+    <center><h2>Information for {{ user.name }}</h2></center>
+    <br>
+    <center><table>
+    <tr>
+      <th>Dinner Group</th>
+      <td>{{ user.dinner_group }}</td>
+    </tr>
+    <tr>
+      <th>Group Letter</th>
+      <td>{{ user.group_letter }}</td>
+    </tr>
+    <tr>
+      <th>Interview Time</th>
+      <td>{{ user.interview_time }}</td>
+    </tr>
+    <tr>
+      <th>Interview Location</th>
+      <td>{{ user.interview_location }}</td>
+    </tr>
+    <tr>
+      <th>Group Interview Location</th>
+      <td>{{ user.group_interview_location }}</td>
+    </tr>
+  <tr>
+    <th>Model Class and Location</th>
+    <td>{{ user.model_class }}, {{ user.model_class_location }}</td>
+  </tr>
+  <tr>
+    <th>Interviewers</th>
+    <td>{{ user.interviewers }}</td>
+  </tr>
+  </center></table>
+</div>
+
+<div class="footer">
+  <h4><a href="http://www.olin.edu/" target="_blank">Olin College of Engineering</a><br>
+    1000 Olin Way <br>
+    Needham, MA 02492<br>
+    781.292.2300 <br>
+  <a href="https://www.facebook.com/OlinCollege/" class="fa fa-facebook" target='_blank'></a>
+  <a href="https://twitter.com/OlinCollege" class="fa fa-twitter" target='_blank'></a>
+  <a href="https://www.flickr.com/photos/olin" class="fa fa-flickr" target='_blank'></a>
+  <a href="https://www.youtube.com/user/FranklinWOlinCollege" class="fa fa-youtube" target='_blank'></a>
+  <a href="https://www.linkedin.com/school/olincollege/" class="fa fa-linkedin" target='_blank'></a>
+  <a href="https://www.instagram.com/olincollege/" class="fa fa-instagram" target='_blank'></a>
+</div>
+</div>
+
+</body>
+</html>

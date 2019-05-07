@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    .body {
+      padding: 10px;
+      padding-bottom: 60px;
+    }
+      .header {
+        background-color:#009bdf;
+        color: white;
+        padding: 20px;
+        text-align: left;
+      }
+      .topnav {
+        overflow: hidden;
+        background-color: #009bdf;
+        font-family: DINOT-Light;
+        font-weight: bold;
+      }
+      .topnav-right {
+        float: right;
+      }
+      .topnav a {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      .topnav a:hover.not(.active) {
+        background-color: #ddd;
+        color: white;
+      }
+      .active {
+        background-color: #00458c;
+      }
+      img {
+        max-width: 50%;
+        height:auto;
+      }
+      h1 {
+        max-width: 50%;
+        height:auto;
+        font-family: Dutch801+Rm+BT;
+      }
+      h3 {
+        font-family: Dutch801+Rm+BT;
+      }
+      form {
+        font-family: Dutch801+Rm+BT;
+      }
+      a {
+        font-family: Dutch801+Rm+BT;
+      }
+    </style>
+    <link href="//db.onlinewebfonts.com/c/feab4f015f183ad38338781e0369490d?family=DINOT-Regular" rel="stylesheet" type="text/css"/>
+    <link href="//db.onlinewebfonts.com/c/28b5efd56dd0967c557de7d5f34fca2c?family=DINOT-Light" rel="stylesheet" type="text/css"/>
+    <link href="//db.onlinewebfonts.com/c/940f2f81f30e67e3850d7e72e1dc2379?family=Dutch801+Rm+BT" rel="stylesheet" type="text/css"/>
+    <link rel="icon" type="image/jpg" href="{{ img_url1 }}">
+        <title>
+            Olin College of Engineering
+        </title>
+  </head>
+  <body>
+
+    <div class="header">
+        <h1><img src="{{ img_url }}" alt="Olin O"/></h1>
+    </div>
+
+    <div class="topnav">
+      <a href="{{ url_for('admin_welcome') }}">WELCOME</a>
+      <a href="{{ url_for('admin_schedule') }}">CW SCHEDULE</a>
+      <a href="{{ url_for('admin_manager') }}" class="active">CW ADMIN</a>
+      <div class="topnav-right">
+        <a href="{{ url_for('homepage') }}">LOGOUT</a>
+      </div>
+    </div>
+    <div class="body">
+    <h1>Change General Information</h1>
+    <h3>Changes will apply to all events.</h3>
+    <form action="{{ url_for('change_gen_info') }}" method="post" enctype='multipart/form-data'>
+      Current Candidates' Weekend Number: <input type='number' name='cw_number' min='1' max='3' value = "{{ current_cw_number }}"><br>
+      <input type="submit" value ="Submit"><br>
+    </form>
+    <a href="{{ url_for('admin_manager') }}">Back</a>
+  </div>
+  </body>
+</html>
