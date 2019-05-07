@@ -25,7 +25,7 @@ These instructions will allow you to run and test the project on your local mach
 
 ### Required Packages
 
-To run this project you will need to install flask firebase_admin, and pandas. Use the following code to install the packages.
+To run this project locally and interact with the code, you will need to install flask firebase_admin, and pandas. Use the following code to install the packages.
 
 `pip install flask`
 
