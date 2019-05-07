@@ -1,11 +1,11 @@
 <div class="topnav">
-	<a href="https://18chowdhary.github.io/CandidatesWeekendGuide/">Home</a>
-	<a href="https://18chowdhary.github.io/CandidatesWeekendGuide/overview">Overview</a>
-	<a href="https://18chowdhary.github.io/CandidatesWeekendGuide/evolution">Evolution</a>
-	<a href="https://18chowdhary.github.io/CandidatesWeekendGuide/results" class="active">Results</a>
-	<a href="https://18chowdhary.github.io/CandidatesWeekendGuide/implementation">Implementation</a>
-	<a href="https://18chowdhary.github.io/CandidatesWeekendGuide/ethics">Impact</a>
-	<a href="https://18chowdhary.github.io/CandidatesWeekendGuide/about">About Us</a>
+	<a href="https://sd19spring.github.io/Candidates-Weekend-Guide/">Home</a>
+	<a href="https://sd19spring.github.io/Candidates-Weekend-Guide/overview">Overview</a>
+	<a href="https://sd19spring.github.io/Candidates-Weekend-Guide/evolution">Evolution</a>
+	<a href="https://sd19spring.github.io/Candidates-Weekend-Guide/results" class="active">Results</a>
+	<a href="https://sd19spring.github.io/Candidates-Weekend-Guide/implementation">Implementation</a>
+	<a href="https://sd19spring.github.io/Candidates-Weekend-Guide/ethics">Impact</a>
+	<a href="https://sd19spring.github.io/Candidates-Weekend-Guide/about">About Us</a>
  </div>
 
 # Results
