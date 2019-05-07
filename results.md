@@ -16,11 +16,14 @@ After six weeks of meetings, git commits, and breaking each others' code, we are
 
 The Candidates' Weekend Guide is the electronic substitute for the paper handouts presented at Olin College's Candidates' Weekend.
 
-![Login](/photos/IMG_0487.png)
+![Login](/photos/IMG_0847.png)
 
-After successfully logging in to the site, the candidate gets access to their personalized Candidates' Weekend schedule as well as their Candidate information - information typically given to students on the back of their name tags when they arrive to campus.
+After successfully logging in to the site, the candidate gets access to their personalized Candidates' Weekend schedule. 
 
 ![Schedule](/photos/IMG_0850.png)
+
+They also have access to their Candidate information - information typically given to students on the back of their name tags when they arrive to campus.
+
 ![Info Card](/photos/IMG_0852.png)
 
 Events also have their own personal pages that have further information.
