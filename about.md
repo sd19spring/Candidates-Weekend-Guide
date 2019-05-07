@@ -18,7 +18,7 @@
 
 We are a group of students at Olin College of Engineering. We designed this web app for the betterment of our college. This project also serves as our final deliverable for the class Software Design. All of us have strong interests in software and wanted to use our skills to give back to the college we love.
 
-When Megan "Meg" Ku isn't coding, she can be found folding origami, getting "buff", or singing in the Olin PowerChords a cappella group. She has enjoyed working on this project with two of her great friends and contributing to the college in a positive way.  As an OVAL tour guide, she is very excited to see this app used by prospective and admitted students in the future.
+When Megan "Meg" Ku isn't coding, she can be found folding origami, getting "buff", or singing in the Olin PowerChords a cappella group. She has enjoyed working on this project with two of her closest friends and contributing to the college in a positive way.  As an OVAL tour guide, she is very excited to see this app used by prospective and admitted students in the future.
 
 Hailing from the great state of Texas, Kristin Aoki has diverse interests, ranging from community service to baking. She hasn't declared which focus within engineering she'd like to concentrate on, but she is enjoying the software and design aspects of this project.
 
