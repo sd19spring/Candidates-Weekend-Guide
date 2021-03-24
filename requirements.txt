@@ -101,7 +101,7 @@ pyzmail36==1.0.4
 pyzmq==17.1.2
 qtconsole==4.4.1
 requests==2.20.0
-rsa==4.0
+rsa==4.1
 ruamel-yaml==0.15.46
 scikit-learn==0.20.3
 scipy==1.1.0
